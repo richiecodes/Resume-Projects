@@ -1,20 +1,19 @@
 import React from 'react';
 import RecipeSearch from './pages/RecipeSearch';
 import Home from './pages/Home';
-import About from './pages/About';
-import Nav from './Nav';
+import Nav from './components/Nav';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import './styles/App.css';
 
 const App = () => {
   return(
   <div className="App">
+    <h1 className="app-title">Yumbo Gumbo</h1>
     <Router>
-      
         <Nav />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/recipe-search" component={RecipeSearch} />
-          <Route path="/about" component={About} />
         </Switch>
       </Router>
       </div>

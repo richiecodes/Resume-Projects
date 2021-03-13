@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../App.css';
+import '../styles/RecipeSearch.css';
 import Recipe from '../components/Recipe';
 
 const RecipeSearch = () => {
@@ -44,19 +44,19 @@ const RecipeSearch = () => {
 
   return(
     <div className="recipe-search">
-      <h1 className="page-header">Recipe Search</h1>
       <form onSubmit={getSearch} className="search-form">
-        <input className="search-bar" type="text" value={search} onChange={updateSearch}/>
+        <input className="search-bar" type="text" placeholder="You hungry? 😎" value={search} onChange={updateSearch}/>
         <button className="search-button" type="submit">
-          Search
+          Yumbo!
         </button>
       </form>
-      <div className="recipe">
+      <div className="recipes">
         {recipes.map(recipe => (
           <Recipe key={recipe.recipe.label}
           title={recipe.recipe.label} 
           calories={Math.round(recipe.recipe.calories)}
-          image={recipe.recipe.image} />
+          image={recipe.recipe.image} 
+          ingredients={recipe.recipe.ingredients} />
         ))}
       </div>
     </div>
