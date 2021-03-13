@@ -56,7 +56,8 @@ const RecipeSearch = () => {
           title={recipe.recipe.label} 
           calories={Math.round(recipe.recipe.calories)}
           image={recipe.recipe.image} 
-          ingredients={recipe.recipe.ingredients} />
+          ingredients={recipe.recipe.ingredients} 
+          recipe={recipe.recipe.url} />
         ))}
       </div>
     </div>
