@@ -10,7 +10,7 @@ const RecipeSearch = () => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState(search);
+  const [query, setQuery] = useState("");
 
   // Fetch via axios, return data based on query and authenticate with APP_ID and APP_KEY
   const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
@@ -40,6 +40,8 @@ const RecipeSearch = () => {
   const getSearch = e => {
     e.preventDefault();
     setQuery(search);
+    console.log(search);
+    setSearch("");
   }
 
   return(
@@ -52,7 +54,7 @@ const RecipeSearch = () => {
       </form>
       <div className="recipes">
         {recipes.map(recipe => (
-          <Recipe key={recipe.recipe.label}
+          <Recipe key={recipes.indexOf(recipe)}
           title={recipe.recipe.label} 
           calories={Math.round(recipe.recipe.calories)}
           image={recipe.recipe.image} 

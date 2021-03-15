@@ -7,7 +7,7 @@ const Recipe = ({title, calories, image, ingredients, recipe}) => {
             <h1 className={style.title}>{title}</h1>
             <ol className={style.list}>
                 {ingredients.map(ingredient => (
-                    <li key={ingredient.text}>{ingredient.text}</li>
+                    <li key={ingredients.indexOf(ingredient)}>{ingredient.text}</li>
                 ))}
             </ol>
             <a href={image} target="_blank">
