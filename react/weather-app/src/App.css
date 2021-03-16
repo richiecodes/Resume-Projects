@@ -21,4 +21,12 @@
   height: 500px;
   background-color: cadetblue;
   color: black;
+  justify-content: space-evenly;
+
+}
+
+.temp {
+  font-weight: 500;
+  color: white;
+  font-size: 72px;
 }
