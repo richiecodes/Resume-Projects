@@ -7,7 +7,7 @@ const App = () => {
     <div className="App">
       <h1>Weather App</h1>
       <div className="weather-card">
-        {/* WORK HERE */}
+        {/* WORK HERE !!!!*/}
         <input type="text" placeholder="search..." />
         <p>Date, Live time counter</p>
         <p>City, State</p>
