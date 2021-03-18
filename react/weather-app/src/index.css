@@ -1,55 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Oswald&display=swap");
+
 * {
-  margin: auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.container {
-  background-color: black;
+body {
+  font-family: "Fredoka", sans-serif;
 }
 
-.App {
-  background-image: url('assets/cold-bg.jpeg');
-  background-position: bottom;
+.app {
+  background-image: url("./assets/sunny-bg.jpg");
   background-size: cover;
-  width: 360px;
-  align-items: center;
-  align-content: center;
-  border: 3px solid white;
-  border-radius: 5px;
+  background-position: bottom;
 }
 
 main {
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.55)
+  );
   padding: 25px;
 }
 
 .search-box {
   width: 100%;
   margin: 0 0 75px;
+
+  text-align: center;
 }
 
-.search-box .search-bar {
+.search-bar {
   display: block;
   width: 100%;
   padding: 15px;
   appearance: none;
-  background: none;
-  border: none;
   outline: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 0 0 10px 10px;
-  margin-top: -25px;
-  color: #313131;
+  border: none;
+  background: none;
+  background-color: rgba(255, 255, 255, 0.55);
+  transition: 1s ease;
+  border-radius: 15px;
   font-size: 20px;
-  transition: 0.8s ease;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-weight: 500;
 }
 
-.search-box .search-bar:focus {
-  background-color: rgba(255, 255, 255, 1);
+.search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 40px;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+.location {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.date {
+  color: #fff;
+  font-size: 45px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.weather-box {
+  text-align: center;
+}
+
+.temp {
+  position: relative;
+  display: inline-block;
+  margin: 50px auto;
+  background-color: rgba(78, 78, 78, 0.3);
+  border-radius: 15px;
+  padding: 15px;
+
+  color: #fff;
+  font-size: 120px;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 3px 5px rgba(0, 0, 0, 0.35);
+  box-shadow: 3px 5px rgba(0, 0, 0, 0.25);
+  border: 5px solid white;
+}
+
+.temp:hover {
+  background-color: rgba(94, 93, 93, 0.5);
+  cursor: none;
+}
+
+.weather {
+  text-align: center;
+  text-shadow: 3px 5px rgba(0, 0, 0, 0.35);
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
 }

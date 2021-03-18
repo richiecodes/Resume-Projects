@@ -1,19 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Weather from './components/weather.component';
 
-const App = () => {
+function App() {
 
-  return(
-    <div className="container">
-      <div className="App">
-        <main>
-          <div className="search-box">
-            <input type="text" placeholder="Search..." className="search-bar" />
-          </div>
-        </main>
-      </div>
+  return (
+    <div className="app">
+      <main>
+       <Weather />
+      </main>
     </div>
-  )
+  );
 }
 
 export default App;
