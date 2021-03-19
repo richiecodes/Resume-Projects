@@ -11,9 +11,26 @@ body {
 }
 
 .app {
-  background-image: url("./assets/sunny-bg.jpg");
+  background-image: url("./assets/cold_bg.jpeg");
   background-size: cover;
   background-position: bottom;
+  animation: fadeIn 2s;
+  transition: 0.5s ease-in;
+}
+
+.app.warm {
+  background-image: url("./assets/sunny-bg.jpg");
+
+  transition: 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
 }
 
 main {
@@ -83,7 +100,6 @@ main {
   background-color: rgba(78, 78, 78, 0.3);
   border-radius: 15px;
   padding: 15px;
-
   color: #fff;
   font-size: 120px;
   font-weight: 900;
@@ -104,4 +120,13 @@ main {
   color: white;
   font-size: 48px;
   font-weight: 600;
+}
+
+.weather-desc {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
 }
